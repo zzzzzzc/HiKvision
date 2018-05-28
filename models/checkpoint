@@ -1,0 +1,2 @@
+model_checkpoint_path: "carDetect_model.ckpt"
+all_model_checkpoint_paths: "carDetect_model.ckpt"
