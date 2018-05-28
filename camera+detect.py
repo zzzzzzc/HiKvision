@@ -89,11 +89,17 @@ saver.restore(sess,"./models/carDetect_model.ckpt")
 while(cam.isOpened()):
     img_counter=img_counter+1
     print(img_counter)
-    ret, pic = cam.read()
-    cv2.imshow('pic', pic)
+    ret, piclarge = cam.read()
+    cv2.imshow('pic', piclarge)
     #if not ret:
     #    break
     cv2.waitKey(1)
+    height, width = piclarge.shape[:2]  
+  
+    # 缩小图像  
+    size = (int(width*0.3), int(height*0.3))  
+    pic = cv2.resize(piclarge, size, interpolation=cv2.INTER_AREA)  
+
 
     #识别
     size = pic.shape
