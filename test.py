@@ -67,7 +67,7 @@ def deepnn(x, keep_prop):
 
     return ret_conv5
 #导入图片
-pic = cv2.imread("./datas/CarData/TestImages/test-100.pgm", 0)
+pic = cv2.imread("cartest.jpg", 0)
 
 size = pic.shape
 
